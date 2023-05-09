@@ -1,0 +1,169 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; 
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+.header {
+  background-color: black;
+  height: 5rem;
+  width: 100%;
+  position: relative;
+}
+
+.logo {
+  color: white;
+  font-size: 3rem;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  justify-self: start;
+  font-weight: 700;
+  padding: 1rem;
+  width: 50%;
+  font-weight: 400;
+}
+
+.logo span {
+  color: blue;
+  font-weight: 700;
+}
+
+.nav {
+  display: inline-flex;
+  gap: 5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1.5rem;
+  width: 50%;
+  justify-content: flex-end;
+  align-items: center;
+  font-weight: 700;;
+}
+
+.nav a {
+  color: white;
+}
+
+.nav a:link {
+  text-decoration: none;
+}
+
+.drop-down-menu{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 1rem;
+  border: 1px solid gray;
+  border-radius: 20%;
+  visibility: hidden;
+  position: absolute;
+  top: 3rem;
+  right: 2rem;
+  width: 30%;
+}
+
+.drop-down-menu-btn {
+  color: white;
+  background: transparent;
+  padding: 5px;
+  border: none;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.drop-down-menu a {
+  background-color: white;
+  text-decoration: none;
+  color: green;
+  border-bottom: 1px solid gray;
+  font-weight: 700;
+  padding: 5px;
+}
+
+.drop-down-menu a:hover {
+  background: transparent;
+  text-decoration: none;
+  color: green;
+  border-bottom: 1px solid gray;
+  font-weight: 700;
+  padding: 5px;
+  margin-bottom: 1rem;
+  left: 100%;
+}
+
+.show {
+  display: flex;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 1.5rem;
+  height: .2rem;
+  background-color: #ffffff;
+  margin: 6px 0;
+  transition: all .5s ease;
+}
+
+@media (max-width: 700px){
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header {
+    background-color: black;
+    height: 5rem;
+    width: 100%;
+    display: flex;
+  }
+  
+  .logo {
+    color: white;
+    font-size: 2rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    justify-self: start;
+    font-weight: 700;
+    padding: 1rem;
+    font-weight: 400;
+    align-self: center;
+  }
+
+  .drop-down-menu {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    padding: 1rem;
+    width: 100%;
+    visibility: hidden;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    align-items: center;
+    justify-items: end;
+    top: 5rem;
+    right: 0;
+    left: 10%;
+
+    transition: all 2s ease-in-out;
+  }
+
+  .drop-down-menu a {
+    background: transparent;
+    text-decoration: none;
+    color: green;
+    border-bottom: 1px solid gray;
+    font-weight: 700;
+    padding: 5px;
+    margin-bottom: 1rem;
+    left: 100%;
+
+    transition: all 2s ease-in-out;
+  }
+}
