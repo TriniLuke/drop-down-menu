@@ -1,4 +1,4 @@
-export default class DropDownMenu {
+class DropDownMenu {
   constructor(elem, link) {
     this.elem = elem;
     this.link = link;
@@ -6,7 +6,7 @@ export default class DropDownMenu {
 
   hideAndDisplay() {
     this.link.addEventListener("click", () => {
-      this.elem.style.visibility === "visible" ? this.elem.style.visibility = "hidden" : this.elem.style.visibility = "visible";
+      this.elem.style.visibility === "hidden" ? this.elem.style.visibility = "visible" : this.elem.style.visibility = "hidden";
     });
   }
 }
